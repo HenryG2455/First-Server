@@ -10,7 +10,7 @@
   "author": "Henry Gushurst",
   "license": "ISC",
   "dependencies": {
-    "knex": "^0.13.0",
+    "knex": "^0.19.5",
     "koa": "^2.8.1",
     "koa-bodyparser": "^4.2.1",
     "koa-ejs": "^4.2.0",
