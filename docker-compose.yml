@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:alpine
+    container_name: pg_container1
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: node_container1
+    links:
+      - database
+    env_file:
+      - app-variables.env
+    depends_on: 
+      - database
+    ports:
+      - "4001:54320"
+volumes:
+  pg_data:
+    external: true
